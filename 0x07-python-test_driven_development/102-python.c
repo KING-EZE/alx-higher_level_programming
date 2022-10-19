@@ -17,7 +17,9 @@ void print_python_string(Pyobject *p)
 		printf(" [ERROR] Invalid String Object\n");
 		return;
 	}
+
 	length = ((PyASCIIobject *)(p))->length;
+
 	if (PyUnicode_IS_COMPACT_ASCII(p))
 		printf(" type: compact ascii\n");
 	else
